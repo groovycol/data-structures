@@ -65,7 +65,11 @@ def sort_by_cohort(filename):
             tas.append(name)
         else:
             continue
-    
+    winter_15.sort()
+    spring_15.sort()
+    summer_15.sort()
+    tas.sort()
+
     all_students = [winter_15, spring_15, summer_15, tas]
     return all_students
 
@@ -101,6 +105,14 @@ def students_by_house(filename):
     instructors = []
 
     # Code goes here
+    data_filename = open(filename)
+    for line in data_filename:
+        line = line.rstrip()
+        working_line = line.split('|')
+
+        if working_line[2] == "Gryffindor":
+            
+
 
     return all_students
 
